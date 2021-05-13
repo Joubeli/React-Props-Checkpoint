@@ -1,6 +1,6 @@
 .copyright{
     font-size: 16px;
-    color: #ababab;
+    color: #535353;
     text-align: center;
     margin-top: 10px;
   }
@@ -9,30 +9,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-items: stretch;
+    justify-content: center;
     border: 1px solid;
-    border-color:rgb(54, 54, 54) ;
+    border-color:#3978bd ;
     padding: 25px 25px 25px 25px;
     border-radius: 10px;
     box-shadow: 0px 5px 10px 0px #e2dede;;
-    width: 40%;
+    width: 60%;
     margin-top: 25px;
-    margin-left: 390px;
+    margin-left: 260px;
 
 }
 
-.join{
-
-}
 
 .profile:hover{
-    box-shadow: 0 5px 10px 0 #1b2734;
-    background-color: rgb(255, 255, 255);
+    box-shadow: 0 5px 10px 0 #3978bd;
+    background-color: #dcdddd;
 
 }
 .cimg{
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;

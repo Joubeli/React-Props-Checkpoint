@@ -6,8 +6,8 @@ function App() {
   const alertName = (myname) => {
     alert(`Hello I am ${myname}`);
   };
-  let profile = [{
-    Name: 'Imen Joubeli (Bou A li)',
+  let profile = {
+    Name: 'Imen Joubeli (Bou Ali)',
     /* img:'https://holocaustmusic.ort.org/typo3conf/ext/ne_hm_t3template/Resources/Public/Images/loader.gif', */
     img:'https://static.wixstatic.com/media/7cfced_b653aba696ce4833a9b08d26f8ecfb19~mv2.gif',
     bio: `My name is Imen Joubeli and I am a full-stack Web
@@ -16,7 +16,9 @@ function App() {
      economical and commercial science of tunis, and a master degree in Data Science for Business.
      My primary focus and inspiration for my studies is Web Development`,
     profession: 'Full-Stack web developer',
-  }]
+  }
+
+  let desc='If You like this content send me E-mail : joubeliimen@gmail.com'
   return (
     <>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -39,12 +41,13 @@ function App() {
         </Navbar.Collapse>
       </Navbar>
       
-      <Profile profile={profile} alertName={alertName}>
+      <Profile profile={profile} alertName={alertName} desc={desc} >
         <p className='copyright'> © 2021 Copyright</p>
       </Profile>
     </>
   );
 }
+
 
 
 

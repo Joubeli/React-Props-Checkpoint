@@ -1,32 +1,44 @@
 import React from 'react'
-import {Button } from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
 import PropTypes from 'prop-types'
 
 
-const Profile = ({profile, children, alertName }) => {
+const Profile = ({ profile,
+    children, alertName, desc }) => {
     return (
         <>
-        <div className='cimg'>
-        
-        <img className='img' src={profile[0].img} alt='image1'></img>
-        <Button  onClick={()=>alertName(profile[0].Name)}>Join Me On Instagram</Button>{' '}
-        </div>
-        <div className='profile'>
-            <h1>{profile[0].Name}</h1>
-            <p style={{textAlign:'center'}}>{profile[0].bio}</p>
-            <p className='profession'>{profile[0].profession}</p>
-            <div>
-                {children}
-            </div>
+            <div className='cimg'>
 
-        </div>
+                <img className='img' src={profile.img} alt='image1'></img>
+                <Button onClick={() => alertName(profile.Name)}>Join Me On Instagram</Button>{' '}
+            </div>
+            <div className='profile'>
+                <h1>{profile.Name}</h1>
+                <p style={{ textAlign: 'center' }}>{profile.bio}</p>
+                <p className='profession'>{profile.profession}</p>
+
+                {children}
+                <p className='copyright'>{desc}</p>
+
+
+
+            </div>
         </>
     )
 }
 
+
 Profile.propTypes = {
-     alertName: PropTypes.func.isRequired,
-  };
+    profile: PropTypes.shape({
+        Name: PropTypes.string.isRequired,
+        profession: PropTypes.string.isRequired,
+        bio: PropTypes.string.isRequired,
+    }),
 
+    alertName: PropTypes.func.isRequired,
+};
 
+Profile.defaultProps = {
+    desc: "No Data Description",
+};
 export default Profile
